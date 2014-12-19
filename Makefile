@@ -33,10 +33,10 @@ cleanruby:
 
 #JAVA###########################################################
 runjava: generatejava
-	tree ./java
+	tree ./java/src
 
 generatejava: currentproto
-	protoc  -I=./ --java_out=./java ./$(PROTO_CURRENT_FILE)
+	protoc  -I=./ --java_out=./java/src ./$(PROTO_CURRENT_FILE)
 
 cleanjava:
-	rm -rf java/com
+	rm -rf java/src/com/google/transit/realtime
