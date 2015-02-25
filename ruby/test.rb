@@ -197,19 +197,37 @@ feed_message_w_vehicle.serialize_to_file(options[:vehicle])
 feed_message_w_alert.serialize_to_file(options[:alert])
 
 #READ MESSAGE FROM INPUT FILE
-feed_message_r_trip = FeedMessage.new
-feed_message_r_trip.parse_from_file options[:trip]
-feed_message_r_vehicle = FeedMessage.new
-feed_message_r_vehicle.parse_from_file options[:vehicle]
-feed_message_r_alert = FeedMessage.new
-feed_message_r_alert.parse_from_file options[:alert]
+#feed_message_r_trip = FeedMessage.new
+#feed_message_r_trip.parse_from_file options[:trip]
+#feed_message_r_vehicle = FeedMessage.new
+#feed_message_r_vehicle.parse_from_file options[:vehicle]
+#feed_message_r_alert = FeedMessage.new
+#feed_message_r_alert.parse_from_file options[:alert]
+
+#feed_message_example_trip_update = FeedMessage.new
+#feed_message_example_trip_update.parse_from_file "TripUpdates.pb"
+#feed_message_example_alert = FeedMessage.new
+#feed_message_example_alert.parse_from_file "Alerts.pb"
+#feed_message_example_vehicle = FeedMessage.new
+#feed_message_example_vehicle.parse_from_file "Vehicles.pb"
+
+puts "**********************trip update****************************************"
+#puts feed_message_example_trip_update.inspect
+puts "**********************Vehicle positions**********************************"
+#puts feed_message_example_vehicle.inspect
+puts "**********************Alerts*********************************************"
+#puts feed_message_example_alert.inspect
+puts "*************************************************************************"
 
 puts ""
-puts feed_message_w_trip.inspect
-puts "*************************************************************************"
-puts feed_message_w_vehicle.inspect
-puts "*************************************************************************"
-puts feed_message_w_alert.inspect
+#puts feed_message_w_trip.inspect
+#puts "*************************************************************************"
+#puts feed_message_w_vehicle.inspect
+#puts "*************************************************************************"
+#puts feed_message_w_alert.inspect
 puts ""
+#puts Time.at(feed_message_r_trip.header.timestamp)
 
-puts Time.at(feed_message_r_trip.header.timestamp)
+feed_read = FeedMessage.new
+feed_read.parse_from_file "data.pb"
+puts feed_read.inspect
