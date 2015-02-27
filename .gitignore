@@ -1,11 +1,25 @@
-# Generador de GTFS-realtime
-F_*
+# bin
+**bin
 
 # Java
 *.class
 
 # Netbeans
 **nbproject
+
+# eclipse
+.settings
+
+# data
+**.pb
+**.properties
+
+# mvn
+target
+dependency-reduced-pom.xml
+
+#svn
+.svn
 
 # Paquetes de instalacion #
 *.gem
