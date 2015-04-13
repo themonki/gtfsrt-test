@@ -10,7 +10,8 @@ public final class GtfsRealtime {
   }
   public interface FeedMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:transit_realtime.FeedMessage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.GeneratedMessage.
+          ExtendableMessageOrBuilder<FeedMessage> {
 
     /**
      * <code>required .transit_realtime.FeedHeader header = 1;</code>
@@ -98,11 +99,12 @@ public final class GtfsRealtime {
    * </pre>
    */
   public static final class FeedMessage extends
-      com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage.ExtendableMessage<
+        FeedMessage> implements
       // @@protoc_insertion_point(message_implements:transit_realtime.FeedMessage)
       FeedMessageOrBuilder {
     // Use FeedMessage.newBuilder() to construct.
-    private FeedMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private FeedMessage(com.google.protobuf.GeneratedMessage.ExtendableBuilder<com.google.transit.realtime.GtfsRealtime.FeedMessage, ?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
@@ -322,6 +324,10 @@ public final class GtfsRealtime {
           return false;
         }
       }
+      if (!extensionsAreInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -329,12 +335,16 @@ public final class GtfsRealtime {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      com.google.protobuf.GeneratedMessage
+        .ExtendableMessage<com.google.transit.realtime.GtfsRealtime.FeedMessage>.ExtensionWriter extensionWriter =
+          newExtensionWriter();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeMessage(1, header_);
       }
       for (int i = 0; i < entity_.size(); i++) {
         output.writeMessage(2, entity_.get(i));
       }
+      extensionWriter.writeUntil(2000, output);
       getUnknownFields().writeTo(output);
     }
 
@@ -352,6 +362,7 @@ public final class GtfsRealtime {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, entity_.get(i));
       }
+      size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -447,7 +458,8 @@ public final class GtfsRealtime {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.ExtendableBuilder<
+          com.google.transit.realtime.GtfsRealtime.FeedMessage, Builder> implements
         // @@protoc_insertion_point(builder_implements:transit_realtime.FeedMessage)
         com.google.transit.realtime.GtfsRealtime.FeedMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -586,6 +598,7 @@ public final class GtfsRealtime {
             }
           }
         }
+        this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -604,6 +617,10 @@ public final class GtfsRealtime {
             
             return false;
           }
+        }
+        if (!extensionsAreInitialized()) {
+          
+          return false;
         }
         return true;
       }
@@ -1976,7 +1993,8 @@ public final class GtfsRealtime {
 
   public interface FeedEntityOrBuilder extends
       // @@protoc_insertion_point(interface_extends:transit_realtime.FeedEntity)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.GeneratedMessage.
+          ExtendableMessageOrBuilder<FeedEntity> {
 
     /**
      * <code>required string id = 1;</code>
@@ -2106,11 +2124,12 @@ public final class GtfsRealtime {
    * </pre>
    */
   public static final class FeedEntity extends
-      com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage.ExtendableMessage<
+        FeedEntity> implements
       // @@protoc_insertion_point(message_implements:transit_realtime.FeedEntity)
       FeedEntityOrBuilder {
     // Use FeedEntity.newBuilder() to construct.
-    private FeedEntity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private FeedEntity(com.google.protobuf.GeneratedMessage.ExtendableBuilder<com.google.transit.realtime.GtfsRealtime.FeedEntity, ?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
@@ -2457,6 +2476,10 @@ public final class GtfsRealtime {
           return false;
         }
       }
+      if (!extensionsAreInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -2464,6 +2487,9 @@ public final class GtfsRealtime {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      com.google.protobuf.GeneratedMessage
+        .ExtendableMessage<com.google.transit.realtime.GtfsRealtime.FeedEntity>.ExtensionWriter extensionWriter =
+          newExtensionWriter();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, getIdBytes());
       }
@@ -2479,6 +2505,7 @@ public final class GtfsRealtime {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeMessage(5, alert_);
       }
+      extensionWriter.writeUntil(2000, output);
       getUnknownFields().writeTo(output);
     }
 
@@ -2508,6 +2535,7 @@ public final class GtfsRealtime {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, alert_);
       }
+      size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -2594,7 +2622,8 @@ public final class GtfsRealtime {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.ExtendableBuilder<
+          com.google.transit.realtime.GtfsRealtime.FeedEntity, Builder> implements
         // @@protoc_insertion_point(builder_implements:transit_realtime.FeedEntity)
         com.google.transit.realtime.GtfsRealtime.FeedEntityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -2747,6 +2776,7 @@ public final class GtfsRealtime {
         if (other.hasAlert()) {
           mergeAlert(other.getAlert());
         }
+        this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2773,6 +2803,10 @@ public final class GtfsRealtime {
             
             return false;
           }
+        }
+        if (!extensionsAreInitialized()) {
+          
+          return false;
         }
         return true;
       }
@@ -3600,6 +3634,49 @@ public final class GtfsRealtime {
      * </pre>
      */
     long getTimestamp();
+
+    /**
+     * <code>optional int32 delay = 5;</code>
+     *
+     * <pre>
+     * The current schedule deviation for the trip.  Delay should only be
+     * specified when the prediction is given relative to some existing schedule
+     * in GTFS.
+     * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+     * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+     * means that the vehicle is exactly on time.
+     * Delay information in StopTimeUpdates take precedent of trip-level delay
+     * information, such that trip-level delay is only propagated until the next
+     * stop along the trip with a StopTimeUpdate delay value specified.
+     * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+     * value indicating when the delay value was last updated, in order to
+     * evaluate the freshness of the data.
+     * NOTE: This field is still experimental, and subject to change. It may be
+     * formally adopted in the future.
+     * </pre>
+     */
+    boolean hasDelay();
+    /**
+     * <code>optional int32 delay = 5;</code>
+     *
+     * <pre>
+     * The current schedule deviation for the trip.  Delay should only be
+     * specified when the prediction is given relative to some existing schedule
+     * in GTFS.
+     * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+     * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+     * means that the vehicle is exactly on time.
+     * Delay information in StopTimeUpdates take precedent of trip-level delay
+     * information, such that trip-level delay is only propagated until the next
+     * stop along the trip with a StopTimeUpdate delay value specified.
+     * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+     * value indicating when the delay value was last updated, in order to
+     * evaluate the freshness of the data.
+     * NOTE: This field is still experimental, and subject to change. It may be
+     * formally adopted in the future.
+     * </pre>
+     */
+    int getDelay();
   }
   /**
    * Protobuf type {@code transit_realtime.TripUpdate}
@@ -3718,6 +3795,11 @@ public final class GtfsRealtime {
             case 32: {
               bitField0_ |= 0x00000004;
               timestamp_ = input.readUInt64();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000008;
+              delay_ = input.readInt32();
               break;
             }
           }
@@ -4764,7 +4846,7 @@ public final class GtfsRealtime {
          * stops, although not necessarily according to the times of the schedule.
          * At least one of arrival and departure must be provided. If the schedule
          * for this stop contains both arrival and departure times then so must
-         * this update. 
+         * this update.
          * </pre>
          */
         SCHEDULED(0, 0),
@@ -4799,7 +4881,7 @@ public final class GtfsRealtime {
          * stops, although not necessarily according to the times of the schedule.
          * At least one of arrival and departure must be provided. If the schedule
          * for this stop contains both arrival and departure times then so must
-         * this update. 
+         * this update.
          * </pre>
          */
         public static final int SCHEDULED_VALUE = 0;
@@ -6043,11 +6125,61 @@ public final class GtfsRealtime {
       return timestamp_;
     }
 
+    public static final int DELAY_FIELD_NUMBER = 5;
+    private int delay_;
+    /**
+     * <code>optional int32 delay = 5;</code>
+     *
+     * <pre>
+     * The current schedule deviation for the trip.  Delay should only be
+     * specified when the prediction is given relative to some existing schedule
+     * in GTFS.
+     * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+     * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+     * means that the vehicle is exactly on time.
+     * Delay information in StopTimeUpdates take precedent of trip-level delay
+     * information, such that trip-level delay is only propagated until the next
+     * stop along the trip with a StopTimeUpdate delay value specified.
+     * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+     * value indicating when the delay value was last updated, in order to
+     * evaluate the freshness of the data.
+     * NOTE: This field is still experimental, and subject to change. It may be
+     * formally adopted in the future.
+     * </pre>
+     */
+    public boolean hasDelay() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 delay = 5;</code>
+     *
+     * <pre>
+     * The current schedule deviation for the trip.  Delay should only be
+     * specified when the prediction is given relative to some existing schedule
+     * in GTFS.
+     * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+     * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+     * means that the vehicle is exactly on time.
+     * Delay information in StopTimeUpdates take precedent of trip-level delay
+     * information, such that trip-level delay is only propagated until the next
+     * stop along the trip with a StopTimeUpdate delay value specified.
+     * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+     * value indicating when the delay value was last updated, in order to
+     * evaluate the freshness of the data.
+     * NOTE: This field is still experimental, and subject to change. It may be
+     * formally adopted in the future.
+     * </pre>
+     */
+    public int getDelay() {
+      return delay_;
+    }
+
     private void initFields() {
       trip_ = com.google.transit.realtime.GtfsRealtime.TripDescriptor.getDefaultInstance();
       vehicle_ = com.google.transit.realtime.GtfsRealtime.VehicleDescriptor.getDefaultInstance();
       stopTimeUpdate_ = java.util.Collections.emptyList();
       timestamp_ = 0L;
+      delay_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6101,6 +6233,9 @@ public final class GtfsRealtime {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeUInt64(4, timestamp_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(5, delay_);
+      }
       extensionWriter.writeUntil(2000, output);
       getUnknownFields().writeTo(output);
     }
@@ -6126,6 +6261,10 @@ public final class GtfsRealtime {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(4, timestamp_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, delay_);
       }
       size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
@@ -6296,6 +6435,8 @@ public final class GtfsRealtime {
         }
         timestamp_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000008);
+        delay_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -6353,6 +6494,10 @@ public final class GtfsRealtime {
           to_bitField0_ |= 0x00000004;
         }
         result.timestamp_ = timestamp_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.delay_ = delay_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6403,6 +6548,9 @@ public final class GtfsRealtime {
         }
         if (other.hasTimestamp()) {
           setTimestamp(other.getTimestamp());
+        }
+        if (other.hasDelay()) {
+          setDelay(other.getDelay());
         }
         this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
@@ -7439,6 +7587,106 @@ public final class GtfsRealtime {
         return this;
       }
 
+      private int delay_ ;
+      /**
+       * <code>optional int32 delay = 5;</code>
+       *
+       * <pre>
+       * The current schedule deviation for the trip.  Delay should only be
+       * specified when the prediction is given relative to some existing schedule
+       * in GTFS.
+       * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+       * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+       * means that the vehicle is exactly on time.
+       * Delay information in StopTimeUpdates take precedent of trip-level delay
+       * information, such that trip-level delay is only propagated until the next
+       * stop along the trip with a StopTimeUpdate delay value specified.
+       * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+       * value indicating when the delay value was last updated, in order to
+       * evaluate the freshness of the data.
+       * NOTE: This field is still experimental, and subject to change. It may be
+       * formally adopted in the future.
+       * </pre>
+       */
+      public boolean hasDelay() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 delay = 5;</code>
+       *
+       * <pre>
+       * The current schedule deviation for the trip.  Delay should only be
+       * specified when the prediction is given relative to some existing schedule
+       * in GTFS.
+       * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+       * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+       * means that the vehicle is exactly on time.
+       * Delay information in StopTimeUpdates take precedent of trip-level delay
+       * information, such that trip-level delay is only propagated until the next
+       * stop along the trip with a StopTimeUpdate delay value specified.
+       * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+       * value indicating when the delay value was last updated, in order to
+       * evaluate the freshness of the data.
+       * NOTE: This field is still experimental, and subject to change. It may be
+       * formally adopted in the future.
+       * </pre>
+       */
+      public int getDelay() {
+        return delay_;
+      }
+      /**
+       * <code>optional int32 delay = 5;</code>
+       *
+       * <pre>
+       * The current schedule deviation for the trip.  Delay should only be
+       * specified when the prediction is given relative to some existing schedule
+       * in GTFS.
+       * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+       * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+       * means that the vehicle is exactly on time.
+       * Delay information in StopTimeUpdates take precedent of trip-level delay
+       * information, such that trip-level delay is only propagated until the next
+       * stop along the trip with a StopTimeUpdate delay value specified.
+       * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+       * value indicating when the delay value was last updated, in order to
+       * evaluate the freshness of the data.
+       * NOTE: This field is still experimental, and subject to change. It may be
+       * formally adopted in the future.
+       * </pre>
+       */
+      public Builder setDelay(int value) {
+        bitField0_ |= 0x00000010;
+        delay_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 delay = 5;</code>
+       *
+       * <pre>
+       * The current schedule deviation for the trip.  Delay should only be
+       * specified when the prediction is given relative to some existing schedule
+       * in GTFS.
+       * Delay (in seconds) can be positive (meaning that the vehicle is late) or
+       * negative (meaning that the vehicle is ahead of schedule). Delay of 0
+       * means that the vehicle is exactly on time.
+       * Delay information in StopTimeUpdates take precedent of trip-level delay
+       * information, such that trip-level delay is only propagated until the next
+       * stop along the trip with a StopTimeUpdate delay value specified.
+       * Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+       * value indicating when the delay value was last updated, in order to
+       * evaluate the freshness of the data.
+       * NOTE: This field is still experimental, and subject to change. It may be
+       * formally adopted in the future.
+       * </pre>
+       */
+      public Builder clearDelay() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        delay_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:transit_realtime.TripUpdate)
     }
 
@@ -7634,6 +7882,15 @@ public final class GtfsRealtime {
      * <code>optional .transit_realtime.VehiclePosition.CongestionLevel congestion_level = 6;</code>
      */
     com.google.transit.realtime.GtfsRealtime.VehiclePosition.CongestionLevel getCongestionLevel();
+
+    /**
+     * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+     */
+    boolean hasOccupancyStatus();
+    /**
+     * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+     */
+    com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus getOccupancyStatus();
   }
   /**
    * Protobuf type {@code transit_realtime.VehiclePosition}
@@ -7767,6 +8024,17 @@ public final class GtfsRealtime {
                 vehicle_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000002;
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+              com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus value = com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(9, rawValue);
+              } else {
+                bitField0_ |= 0x00000100;
+                occupancyStatus_ = value;
+              }
               break;
             }
           }
@@ -8046,6 +8314,213 @@ public final class GtfsRealtime {
       // @@protoc_insertion_point(enum_scope:transit_realtime.VehiclePosition.CongestionLevel)
     }
 
+    /**
+     * Protobuf enum {@code transit_realtime.VehiclePosition.OccupancyStatus}
+     *
+     * <pre>
+     * The degree of passenger occupancy of the vehicle. This field is still
+     * experimental, and subject to change. It may be formally adopted in the
+     * future.
+     * </pre>
+     */
+    public enum OccupancyStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>EMPTY = 0;</code>
+       *
+       * <pre>
+       * The vehicle is considered empty by most measures, and has few or no
+       * passengers onboard, but is still accepting passengers.
+       * </pre>
+       */
+      EMPTY(0, 0),
+      /**
+       * <code>MANY_SEATS_AVAILABLE = 1;</code>
+       *
+       * <pre>
+       * The vehicle has a relatively large percentage of seats available.
+       * What percentage of free seats out of the total seats available is to be
+       * considered large enough to fall into this category is determined at the
+       * discretion of the producer.
+       * </pre>
+       */
+      MANY_SEATS_AVAILABLE(1, 1),
+      /**
+       * <code>FEW_SEATS_AVAILABLE = 2;</code>
+       *
+       * <pre>
+       * The vehicle has a relatively small percentage of seats available.
+       * What percentage of free seats out of the total seats available is to be
+       * considered small enough to fall into this category is determined at the
+       * discretion of the feed producer.
+       * </pre>
+       */
+      FEW_SEATS_AVAILABLE(2, 2),
+      /**
+       * <code>STANDING_ROOM_ONLY = 3;</code>
+       *
+       * <pre>
+       * The vehicle can currently accommodate only standing passengers.
+       * </pre>
+       */
+      STANDING_ROOM_ONLY(3, 3),
+      /**
+       * <code>CRUSHED_STANDING_ROOM_ONLY = 4;</code>
+       *
+       * <pre>
+       * The vehicle can currently accommodate only standing passengers
+       * and has limited space for them.
+       * </pre>
+       */
+      CRUSHED_STANDING_ROOM_ONLY(4, 4),
+      /**
+       * <code>FULL = 5;</code>
+       *
+       * <pre>
+       * The vehicle is considered full by most measures, but may still be
+       * allowing passengers to board.
+       * </pre>
+       */
+      FULL(5, 5),
+      /**
+       * <code>NOT_ACCEPTING_PASSENGERS = 6;</code>
+       *
+       * <pre>
+       * The vehicle is not accepting additional passengers.
+       * </pre>
+       */
+      NOT_ACCEPTING_PASSENGERS(6, 6),
+      ;
+
+      /**
+       * <code>EMPTY = 0;</code>
+       *
+       * <pre>
+       * The vehicle is considered empty by most measures, and has few or no
+       * passengers onboard, but is still accepting passengers.
+       * </pre>
+       */
+      public static final int EMPTY_VALUE = 0;
+      /**
+       * <code>MANY_SEATS_AVAILABLE = 1;</code>
+       *
+       * <pre>
+       * The vehicle has a relatively large percentage of seats available.
+       * What percentage of free seats out of the total seats available is to be
+       * considered large enough to fall into this category is determined at the
+       * discretion of the producer.
+       * </pre>
+       */
+      public static final int MANY_SEATS_AVAILABLE_VALUE = 1;
+      /**
+       * <code>FEW_SEATS_AVAILABLE = 2;</code>
+       *
+       * <pre>
+       * The vehicle has a relatively small percentage of seats available.
+       * What percentage of free seats out of the total seats available is to be
+       * considered small enough to fall into this category is determined at the
+       * discretion of the feed producer.
+       * </pre>
+       */
+      public static final int FEW_SEATS_AVAILABLE_VALUE = 2;
+      /**
+       * <code>STANDING_ROOM_ONLY = 3;</code>
+       *
+       * <pre>
+       * The vehicle can currently accommodate only standing passengers.
+       * </pre>
+       */
+      public static final int STANDING_ROOM_ONLY_VALUE = 3;
+      /**
+       * <code>CRUSHED_STANDING_ROOM_ONLY = 4;</code>
+       *
+       * <pre>
+       * The vehicle can currently accommodate only standing passengers
+       * and has limited space for them.
+       * </pre>
+       */
+      public static final int CRUSHED_STANDING_ROOM_ONLY_VALUE = 4;
+      /**
+       * <code>FULL = 5;</code>
+       *
+       * <pre>
+       * The vehicle is considered full by most measures, but may still be
+       * allowing passengers to board.
+       * </pre>
+       */
+      public static final int FULL_VALUE = 5;
+      /**
+       * <code>NOT_ACCEPTING_PASSENGERS = 6;</code>
+       *
+       * <pre>
+       * The vehicle is not accepting additional passengers.
+       * </pre>
+       */
+      public static final int NOT_ACCEPTING_PASSENGERS_VALUE = 6;
+
+
+      public final int getNumber() { return value; }
+
+      public static OccupancyStatus valueOf(int value) {
+        switch (value) {
+          case 0: return EMPTY;
+          case 1: return MANY_SEATS_AVAILABLE;
+          case 2: return FEW_SEATS_AVAILABLE;
+          case 3: return STANDING_ROOM_ONLY;
+          case 4: return CRUSHED_STANDING_ROOM_ONLY;
+          case 5: return FULL;
+          case 6: return NOT_ACCEPTING_PASSENGERS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<OccupancyStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<OccupancyStatus>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<OccupancyStatus>() {
+              public OccupancyStatus findValueByNumber(int number) {
+                return OccupancyStatus.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.transit.realtime.GtfsRealtime.VehiclePosition.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final OccupancyStatus[] VALUES = values();
+
+      public static OccupancyStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private OccupancyStatus(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:transit_realtime.VehiclePosition.OccupancyStatus)
+    }
+
     private int bitField0_;
     public static final int TRIP_FIELD_NUMBER = 1;
     private com.google.transit.realtime.GtfsRealtime.TripDescriptor trip_;
@@ -8303,6 +8778,21 @@ public final class GtfsRealtime {
       return congestionLevel_;
     }
 
+    public static final int OCCUPANCY_STATUS_FIELD_NUMBER = 9;
+    private com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus occupancyStatus_;
+    /**
+     * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+     */
+    public boolean hasOccupancyStatus() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+     */
+    public com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus getOccupancyStatus() {
+      return occupancyStatus_;
+    }
+
     private void initFields() {
       trip_ = com.google.transit.realtime.GtfsRealtime.TripDescriptor.getDefaultInstance();
       vehicle_ = com.google.transit.realtime.GtfsRealtime.VehicleDescriptor.getDefaultInstance();
@@ -8312,6 +8802,7 @@ public final class GtfsRealtime {
       currentStatus_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.VehicleStopStatus.IN_TRANSIT_TO;
       timestamp_ = 0L;
       congestionLevel_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.CongestionLevel.UNKNOWN_CONGESTION_LEVEL;
+      occupancyStatus_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8375,6 +8866,9 @@ public final class GtfsRealtime {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeMessage(8, vehicle_);
       }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeEnum(9, occupancyStatus_.getNumber());
+      }
       extensionWriter.writeUntil(2000, output);
       getUnknownFields().writeTo(output);
     }
@@ -8416,6 +8910,10 @@ public final class GtfsRealtime {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, vehicle_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, occupancyStatus_.getNumber());
       }
       size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
@@ -8571,6 +9069,8 @@ public final class GtfsRealtime {
         bitField0_ = (bitField0_ & ~0x00000040);
         congestionLevel_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.CongestionLevel.UNKNOWN_CONGESTION_LEVEL;
         bitField0_ = (bitField0_ & ~0x00000080);
+        occupancyStatus_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -8643,6 +9143,10 @@ public final class GtfsRealtime {
           to_bitField0_ |= 0x00000080;
         }
         result.congestionLevel_ = congestionLevel_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.occupancyStatus_ = occupancyStatus_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8684,6 +9188,9 @@ public final class GtfsRealtime {
         }
         if (other.hasCongestionLevel()) {
           setCongestionLevel(other.getCongestionLevel());
+        }
+        if (other.hasOccupancyStatus()) {
+          setOccupancyStatus(other.getOccupancyStatus());
         }
         this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
@@ -9513,6 +10020,41 @@ public final class GtfsRealtime {
       public Builder clearCongestionLevel() {
         bitField0_ = (bitField0_ & ~0x00000080);
         congestionLevel_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.CongestionLevel.UNKNOWN_CONGESTION_LEVEL;
+        onChanged();
+        return this;
+      }
+
+      private com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus occupancyStatus_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus.EMPTY;
+      /**
+       * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+       */
+      public boolean hasOccupancyStatus() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus getOccupancyStatus() {
+        return occupancyStatus_;
+      }
+      /**
+       * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+       */
+      public Builder setOccupancyStatus(com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000100;
+        occupancyStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .transit_realtime.VehiclePosition.OccupancyStatus occupancy_status = 9;</code>
+       */
+      public Builder clearOccupancyStatus() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        occupancyStatus_ = com.google.transit.realtime.GtfsRealtime.VehiclePosition.OccupancyStatus.EMPTY;
         onChanged();
         return this;
       }
@@ -10535,6 +11077,12 @@ public final class GtfsRealtime {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      for (int i = 0; i < getActivePeriodCount(); i++) {
+        if (!getActivePeriod(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       for (int i = 0; i < getInformedEntityCount(); i++) {
         if (!getInformedEntity(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -10961,6 +11509,12 @@ public final class GtfsRealtime {
       }
 
       public final boolean isInitialized() {
+        for (int i = 0; i < getActivePeriodCount(); i++) {
+          if (!getActivePeriod(i).isInitialized()) {
+            
+            return false;
+          }
+        }
         for (int i = 0; i < getInformedEntityCount(); i++) {
           if (!getInformedEntity(i).isInitialized()) {
             
@@ -12219,7 +12773,8 @@ public final class GtfsRealtime {
 
   public interface TimeRangeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:transit_realtime.TimeRange)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.GeneratedMessage.
+          ExtendableMessageOrBuilder<TimeRange> {
 
     /**
      * <code>optional uint64 start = 1;</code>
@@ -12272,11 +12827,12 @@ public final class GtfsRealtime {
    * </pre>
    */
   public static final class TimeRange extends
-      com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage.ExtendableMessage<
+        TimeRange> implements
       // @@protoc_insertion_point(message_implements:transit_realtime.TimeRange)
       TimeRangeOrBuilder {
     // Use TimeRange.newBuilder() to construct.
-    private TimeRange(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private TimeRange(com.google.protobuf.GeneratedMessage.ExtendableBuilder<com.google.transit.realtime.GtfsRealtime.TimeRange, ?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
@@ -12434,6 +12990,10 @@ public final class GtfsRealtime {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!extensionsAreInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -12441,12 +13001,16 @@ public final class GtfsRealtime {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      com.google.protobuf.GeneratedMessage
+        .ExtendableMessage<com.google.transit.realtime.GtfsRealtime.TimeRange>.ExtensionWriter extensionWriter =
+          newExtensionWriter();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeUInt64(1, start_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeUInt64(2, end_);
       }
+      extensionWriter.writeUntil(2000, output);
       getUnknownFields().writeTo(output);
     }
 
@@ -12464,6 +13028,7 @@ public final class GtfsRealtime {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, end_);
       }
+      size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -12551,7 +13116,8 @@ public final class GtfsRealtime {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.ExtendableBuilder<
+          com.google.transit.realtime.GtfsRealtime.TimeRange, Builder> implements
         // @@protoc_insertion_point(builder_implements:transit_realtime.TimeRange)
         com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -12648,11 +13214,16 @@ public final class GtfsRealtime {
         if (other.hasEnd()) {
           setEnd(other.getEnd());
         }
+        this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!extensionsAreInitialized()) {
+          
+          return false;
+        }
         return true;
       }
 
@@ -13750,8 +14321,8 @@ public final class GtfsRealtime {
      *
      * <pre>
      * The trip_id from the GTFS feed that this selector refers to.
-     * For non frequency expanded trips, this field is enough to uniquely identify
-     * the trip. For frequency expanded, start_time and start_date might also be
+     * For non frequency-based trips, this field is enough to uniquely identify
+     * the trip. For frequency-based trip, start_time and start_date might also be
      * necessary.
      * </pre>
      */
@@ -13761,8 +14332,8 @@ public final class GtfsRealtime {
      *
      * <pre>
      * The trip_id from the GTFS feed that this selector refers to.
-     * For non frequency expanded trips, this field is enough to uniquely identify
-     * the trip. For frequency expanded, start_time and start_date might also be
+     * For non frequency-based trips, this field is enough to uniquely identify
+     * the trip. For frequency-based trip, start_time and start_date might also be
      * necessary.
      * </pre>
      */
@@ -13772,8 +14343,8 @@ public final class GtfsRealtime {
      *
      * <pre>
      * The trip_id from the GTFS feed that this selector refers to.
-     * For non frequency expanded trips, this field is enough to uniquely identify
-     * the trip. For frequency expanded, start_time and start_date might also be
+     * For non frequency-based trips, this field is enough to uniquely identify
+     * the trip. For frequency-based trip, start_time and start_date might also be
      * necessary.
      * </pre>
      */
@@ -13807,15 +14378,47 @@ public final class GtfsRealtime {
         getRouteIdBytes();
 
     /**
+     * <code>optional uint32 direction_id = 6;</code>
+     *
+     * <pre>
+     * The direction_id from the GTFS feed trips.txt file, indicating the
+     * direction of travel for trips this selector refers to. This field is
+     * still experimental, and subject to change. It may be formally adopted in
+     * the future.
+     * </pre>
+     */
+    boolean hasDirectionId();
+    /**
+     * <code>optional uint32 direction_id = 6;</code>
+     *
+     * <pre>
+     * The direction_id from the GTFS feed trips.txt file, indicating the
+     * direction of travel for trips this selector refers to. This field is
+     * still experimental, and subject to change. It may be formally adopted in
+     * the future.
+     * </pre>
+     */
+    int getDirectionId();
+
+    /**
      * <code>optional string start_time = 2;</code>
      *
      * <pre>
-     * The scheduled start time of this trip instance.
-     * This field should be given only if the trip is frequency-expanded in the
-     * GTFS feed. The value must precisely correspond to start_time specified for
-     * the route in the GTFS feed plus some multiple of headway_secs.
-     * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-     * e.g., 11:15:35 or 25:15:35.
+     * The initially scheduled start time of this trip instance.
+     * When the trip_id corresponds to a non-frequency-based trip, this field
+     * should either be omitted or be equal to the value in the GTFS feed. When
+     * the trip_id correponds to a frequency-based trip, the start_time must be
+     * specified for trip updates and vehicle positions. If the trip corresponds
+     * to exact_times=1 GTFS record, then start_time must be some multiple
+     * (including zero) of headway_secs later than frequencies.txt start_time for
+     * the corresponding time period. If the trip corresponds to exact_times=0,
+     * then its start_time may be arbitrary, and is initially expected to be the
+     * first departure of the trip. Once established, the start_time of this
+     * frequency-based trip should be considered immutable, even if the first
+     * departure time changes -- that time change may instead be reflected in a
+     * StopTimeUpdate.
+     * Format and semantics of the field is same as that of
+     * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
      * </pre>
      */
     boolean hasStartTime();
@@ -13823,12 +14426,21 @@ public final class GtfsRealtime {
      * <code>optional string start_time = 2;</code>
      *
      * <pre>
-     * The scheduled start time of this trip instance.
-     * This field should be given only if the trip is frequency-expanded in the
-     * GTFS feed. The value must precisely correspond to start_time specified for
-     * the route in the GTFS feed plus some multiple of headway_secs.
-     * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-     * e.g., 11:15:35 or 25:15:35.
+     * The initially scheduled start time of this trip instance.
+     * When the trip_id corresponds to a non-frequency-based trip, this field
+     * should either be omitted or be equal to the value in the GTFS feed. When
+     * the trip_id correponds to a frequency-based trip, the start_time must be
+     * specified for trip updates and vehicle positions. If the trip corresponds
+     * to exact_times=1 GTFS record, then start_time must be some multiple
+     * (including zero) of headway_secs later than frequencies.txt start_time for
+     * the corresponding time period. If the trip corresponds to exact_times=0,
+     * then its start_time may be arbitrary, and is initially expected to be the
+     * first departure of the trip. Once established, the start_time of this
+     * frequency-based trip should be considered immutable, even if the first
+     * departure time changes -- that time change may instead be reflected in a
+     * StopTimeUpdate.
+     * Format and semantics of the field is same as that of
+     * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
      * </pre>
      */
     java.lang.String getStartTime();
@@ -13836,12 +14448,21 @@ public final class GtfsRealtime {
      * <code>optional string start_time = 2;</code>
      *
      * <pre>
-     * The scheduled start time of this trip instance.
-     * This field should be given only if the trip is frequency-expanded in the
-     * GTFS feed. The value must precisely correspond to start_time specified for
-     * the route in the GTFS feed plus some multiple of headway_secs.
-     * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-     * e.g., 11:15:35 or 25:15:35.
+     * The initially scheduled start time of this trip instance.
+     * When the trip_id corresponds to a non-frequency-based trip, this field
+     * should either be omitted or be equal to the value in the GTFS feed. When
+     * the trip_id correponds to a frequency-based trip, the start_time must be
+     * specified for trip updates and vehicle positions. If the trip corresponds
+     * to exact_times=1 GTFS record, then start_time must be some multiple
+     * (including zero) of headway_secs later than frequencies.txt start_time for
+     * the corresponding time period. If the trip corresponds to exact_times=0,
+     * then its start_time may be arbitrary, and is initially expected to be the
+     * first departure of the trip. Once established, the start_time of this
+     * frequency-based trip should be considered immutable, even if the first
+     * departure time changes -- that time change may instead be reflected in a
+     * StopTimeUpdate.
+     * Format and semantics of the field is same as that of
+     * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -13982,13 +14603,13 @@ public final class GtfsRealtime {
             }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               startTime_ = bs;
               break;
             }
             case 26: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               startDate_ = bs;
               break;
             }
@@ -13998,7 +14619,7 @@ public final class GtfsRealtime {
               if (value == null) {
                 unknownFields.mergeVarintField(4, rawValue);
               } else {
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000020;
                 scheduleRelationship_ = value;
               }
               break;
@@ -14007,6 +14628,11 @@ public final class GtfsRealtime {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               routeId_ = bs;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000004;
+              directionId_ = input.readUInt32();
               break;
             }
           }
@@ -14202,8 +14828,8 @@ public final class GtfsRealtime {
      *
      * <pre>
      * The trip_id from the GTFS feed that this selector refers to.
-     * For non frequency expanded trips, this field is enough to uniquely identify
-     * the trip. For frequency expanded, start_time and start_date might also be
+     * For non frequency-based trips, this field is enough to uniquely identify
+     * the trip. For frequency-based trip, start_time and start_date might also be
      * necessary.
      * </pre>
      */
@@ -14215,8 +14841,8 @@ public final class GtfsRealtime {
      *
      * <pre>
      * The trip_id from the GTFS feed that this selector refers to.
-     * For non frequency expanded trips, this field is enough to uniquely identify
-     * the trip. For frequency expanded, start_time and start_date might also be
+     * For non frequency-based trips, this field is enough to uniquely identify
+     * the trip. For frequency-based trip, start_time and start_date might also be
      * necessary.
      * </pre>
      */
@@ -14239,8 +14865,8 @@ public final class GtfsRealtime {
      *
      * <pre>
      * The trip_id from the GTFS feed that this selector refers to.
-     * For non frequency expanded trips, this field is enough to uniquely identify
-     * the trip. For frequency expanded, start_time and start_date might also be
+     * For non frequency-based trips, this field is enough to uniquely identify
+     * the trip. For frequency-based trip, start_time and start_date might also be
      * necessary.
      * </pre>
      */
@@ -14312,33 +14938,80 @@ public final class GtfsRealtime {
       }
     }
 
+    public static final int DIRECTION_ID_FIELD_NUMBER = 6;
+    private int directionId_;
+    /**
+     * <code>optional uint32 direction_id = 6;</code>
+     *
+     * <pre>
+     * The direction_id from the GTFS feed trips.txt file, indicating the
+     * direction of travel for trips this selector refers to. This field is
+     * still experimental, and subject to change. It may be formally adopted in
+     * the future.
+     * </pre>
+     */
+    public boolean hasDirectionId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional uint32 direction_id = 6;</code>
+     *
+     * <pre>
+     * The direction_id from the GTFS feed trips.txt file, indicating the
+     * direction of travel for trips this selector refers to. This field is
+     * still experimental, and subject to change. It may be formally adopted in
+     * the future.
+     * </pre>
+     */
+    public int getDirectionId() {
+      return directionId_;
+    }
+
     public static final int START_TIME_FIELD_NUMBER = 2;
     private java.lang.Object startTime_;
     /**
      * <code>optional string start_time = 2;</code>
      *
      * <pre>
-     * The scheduled start time of this trip instance.
-     * This field should be given only if the trip is frequency-expanded in the
-     * GTFS feed. The value must precisely correspond to start_time specified for
-     * the route in the GTFS feed plus some multiple of headway_secs.
-     * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-     * e.g., 11:15:35 or 25:15:35.
+     * The initially scheduled start time of this trip instance.
+     * When the trip_id corresponds to a non-frequency-based trip, this field
+     * should either be omitted or be equal to the value in the GTFS feed. When
+     * the trip_id correponds to a frequency-based trip, the start_time must be
+     * specified for trip updates and vehicle positions. If the trip corresponds
+     * to exact_times=1 GTFS record, then start_time must be some multiple
+     * (including zero) of headway_secs later than frequencies.txt start_time for
+     * the corresponding time period. If the trip corresponds to exact_times=0,
+     * then its start_time may be arbitrary, and is initially expected to be the
+     * first departure of the trip. Once established, the start_time of this
+     * frequency-based trip should be considered immutable, even if the first
+     * departure time changes -- that time change may instead be reflected in a
+     * StopTimeUpdate.
+     * Format and semantics of the field is same as that of
+     * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
      * </pre>
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>optional string start_time = 2;</code>
      *
      * <pre>
-     * The scheduled start time of this trip instance.
-     * This field should be given only if the trip is frequency-expanded in the
-     * GTFS feed. The value must precisely correspond to start_time specified for
-     * the route in the GTFS feed plus some multiple of headway_secs.
-     * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-     * e.g., 11:15:35 or 25:15:35.
+     * The initially scheduled start time of this trip instance.
+     * When the trip_id corresponds to a non-frequency-based trip, this field
+     * should either be omitted or be equal to the value in the GTFS feed. When
+     * the trip_id correponds to a frequency-based trip, the start_time must be
+     * specified for trip updates and vehicle positions. If the trip corresponds
+     * to exact_times=1 GTFS record, then start_time must be some multiple
+     * (including zero) of headway_secs later than frequencies.txt start_time for
+     * the corresponding time period. If the trip corresponds to exact_times=0,
+     * then its start_time may be arbitrary, and is initially expected to be the
+     * first departure of the trip. Once established, the start_time of this
+     * frequency-based trip should be considered immutable, even if the first
+     * departure time changes -- that time change may instead be reflected in a
+     * StopTimeUpdate.
+     * Format and semantics of the field is same as that of
+     * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
      * </pre>
      */
     public java.lang.String getStartTime() {
@@ -14359,12 +15032,21 @@ public final class GtfsRealtime {
      * <code>optional string start_time = 2;</code>
      *
      * <pre>
-     * The scheduled start time of this trip instance.
-     * This field should be given only if the trip is frequency-expanded in the
-     * GTFS feed. The value must precisely correspond to start_time specified for
-     * the route in the GTFS feed plus some multiple of headway_secs.
-     * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-     * e.g., 11:15:35 or 25:15:35.
+     * The initially scheduled start time of this trip instance.
+     * When the trip_id corresponds to a non-frequency-based trip, this field
+     * should either be omitted or be equal to the value in the GTFS feed. When
+     * the trip_id correponds to a frequency-based trip, the start_time must be
+     * specified for trip updates and vehicle positions. If the trip corresponds
+     * to exact_times=1 GTFS record, then start_time must be some multiple
+     * (including zero) of headway_secs later than frequencies.txt start_time for
+     * the corresponding time period. If the trip corresponds to exact_times=0,
+     * then its start_time may be arbitrary, and is initially expected to be the
+     * first departure of the trip. Once established, the start_time of this
+     * frequency-based trip should be considered immutable, even if the first
+     * departure time changes -- that time change may instead be reflected in a
+     * StopTimeUpdate.
+     * Format and semantics of the field is same as that of
+     * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -14400,7 +15082,7 @@ public final class GtfsRealtime {
      * </pre>
      */
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
      * <code>optional string start_date = 3;</code>
@@ -14468,7 +15150,7 @@ public final class GtfsRealtime {
      * <code>optional .transit_realtime.TripDescriptor.ScheduleRelationship schedule_relationship = 4;</code>
      */
     public boolean hasScheduleRelationship() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>optional .transit_realtime.TripDescriptor.ScheduleRelationship schedule_relationship = 4;</code>
@@ -14480,6 +15162,7 @@ public final class GtfsRealtime {
     private void initFields() {
       tripId_ = "";
       routeId_ = "";
+      directionId_ = 0;
       startTime_ = "";
       startDate_ = "";
       scheduleRelationship_ = com.google.transit.realtime.GtfsRealtime.TripDescriptor.ScheduleRelationship.SCHEDULED;
@@ -14507,17 +15190,20 @@ public final class GtfsRealtime {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, getTripIdBytes());
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(2, getStartTimeBytes());
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBytes(3, getStartDateBytes());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeEnum(4, scheduleRelationship_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(5, getRouteIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(6, directionId_);
       }
       extensionWriter.writeUntil(2000, output);
       getUnknownFields().writeTo(output);
@@ -14533,21 +15219,25 @@ public final class GtfsRealtime {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, getTripIdBytes());
       }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getStartTimeBytes());
       }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getStartDateBytes());
       }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, scheduleRelationship_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getRouteIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, directionId_);
       }
       size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
@@ -14684,12 +15374,14 @@ public final class GtfsRealtime {
         bitField0_ = (bitField0_ & ~0x00000001);
         routeId_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        startTime_ = "";
+        directionId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        startDate_ = "";
+        startTime_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        scheduleRelationship_ = com.google.transit.realtime.GtfsRealtime.TripDescriptor.ScheduleRelationship.SCHEDULED;
+        startDate_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        scheduleRelationship_ = com.google.transit.realtime.GtfsRealtime.TripDescriptor.ScheduleRelationship.SCHEDULED;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -14729,13 +15421,17 @@ public final class GtfsRealtime {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.startTime_ = startTime_;
+        result.directionId_ = directionId_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.startDate_ = startDate_;
+        result.startTime_ = startTime_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
+        }
+        result.startDate_ = startDate_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
         }
         result.scheduleRelationship_ = scheduleRelationship_;
         result.bitField0_ = to_bitField0_;
@@ -14764,13 +15460,16 @@ public final class GtfsRealtime {
           routeId_ = other.routeId_;
           onChanged();
         }
+        if (other.hasDirectionId()) {
+          setDirectionId(other.getDirectionId());
+        }
         if (other.hasStartTime()) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           startTime_ = other.startTime_;
           onChanged();
         }
         if (other.hasStartDate()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
           startDate_ = other.startDate_;
           onChanged();
         }
@@ -14815,8 +15514,8 @@ public final class GtfsRealtime {
        *
        * <pre>
        * The trip_id from the GTFS feed that this selector refers to.
-       * For non frequency expanded trips, this field is enough to uniquely identify
-       * the trip. For frequency expanded, start_time and start_date might also be
+       * For non frequency-based trips, this field is enough to uniquely identify
+       * the trip. For frequency-based trip, start_time and start_date might also be
        * necessary.
        * </pre>
        */
@@ -14828,8 +15527,8 @@ public final class GtfsRealtime {
        *
        * <pre>
        * The trip_id from the GTFS feed that this selector refers to.
-       * For non frequency expanded trips, this field is enough to uniquely identify
-       * the trip. For frequency expanded, start_time and start_date might also be
+       * For non frequency-based trips, this field is enough to uniquely identify
+       * the trip. For frequency-based trip, start_time and start_date might also be
        * necessary.
        * </pre>
        */
@@ -14852,8 +15551,8 @@ public final class GtfsRealtime {
        *
        * <pre>
        * The trip_id from the GTFS feed that this selector refers to.
-       * For non frequency expanded trips, this field is enough to uniquely identify
-       * the trip. For frequency expanded, start_time and start_date might also be
+       * For non frequency-based trips, this field is enough to uniquely identify
+       * the trip. For frequency-based trip, start_time and start_date might also be
        * necessary.
        * </pre>
        */
@@ -14875,8 +15574,8 @@ public final class GtfsRealtime {
        *
        * <pre>
        * The trip_id from the GTFS feed that this selector refers to.
-       * For non frequency expanded trips, this field is enough to uniquely identify
-       * the trip. For frequency expanded, start_time and start_date might also be
+       * For non frequency-based trips, this field is enough to uniquely identify
+       * the trip. For frequency-based trip, start_time and start_date might also be
        * necessary.
        * </pre>
        */
@@ -14895,8 +15594,8 @@ public final class GtfsRealtime {
        *
        * <pre>
        * The trip_id from the GTFS feed that this selector refers to.
-       * For non frequency expanded trips, this field is enough to uniquely identify
-       * the trip. For frequency expanded, start_time and start_date might also be
+       * For non frequency-based trips, this field is enough to uniquely identify
+       * the trip. For frequency-based trip, start_time and start_date might also be
        * necessary.
        * </pre>
        */
@@ -14911,8 +15610,8 @@ public final class GtfsRealtime {
        *
        * <pre>
        * The trip_id from the GTFS feed that this selector refers to.
-       * For non frequency expanded trips, this field is enough to uniquely identify
-       * the trip. For frequency expanded, start_time and start_date might also be
+       * For non frequency-based trips, this field is enough to uniquely identify
+       * the trip. For frequency-based trip, start_time and start_date might also be
        * necessary.
        * </pre>
        */
@@ -15027,32 +15726,110 @@ public final class GtfsRealtime {
         return this;
       }
 
+      private int directionId_ ;
+      /**
+       * <code>optional uint32 direction_id = 6;</code>
+       *
+       * <pre>
+       * The direction_id from the GTFS feed trips.txt file, indicating the
+       * direction of travel for trips this selector refers to. This field is
+       * still experimental, and subject to change. It may be formally adopted in
+       * the future.
+       * </pre>
+       */
+      public boolean hasDirectionId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 direction_id = 6;</code>
+       *
+       * <pre>
+       * The direction_id from the GTFS feed trips.txt file, indicating the
+       * direction of travel for trips this selector refers to. This field is
+       * still experimental, and subject to change. It may be formally adopted in
+       * the future.
+       * </pre>
+       */
+      public int getDirectionId() {
+        return directionId_;
+      }
+      /**
+       * <code>optional uint32 direction_id = 6;</code>
+       *
+       * <pre>
+       * The direction_id from the GTFS feed trips.txt file, indicating the
+       * direction of travel for trips this selector refers to. This field is
+       * still experimental, and subject to change. It may be formally adopted in
+       * the future.
+       * </pre>
+       */
+      public Builder setDirectionId(int value) {
+        bitField0_ |= 0x00000004;
+        directionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 direction_id = 6;</code>
+       *
+       * <pre>
+       * The direction_id from the GTFS feed trips.txt file, indicating the
+       * direction of travel for trips this selector refers to. This field is
+       * still experimental, and subject to change. It may be formally adopted in
+       * the future.
+       * </pre>
+       */
+      public Builder clearDirectionId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        directionId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object startTime_ = "";
       /**
        * <code>optional string start_time = 2;</code>
        *
        * <pre>
-       * The scheduled start time of this trip instance.
-       * This field should be given only if the trip is frequency-expanded in the
-       * GTFS feed. The value must precisely correspond to start_time specified for
-       * the route in the GTFS feed plus some multiple of headway_secs.
-       * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-       * e.g., 11:15:35 or 25:15:35.
+       * The initially scheduled start time of this trip instance.
+       * When the trip_id corresponds to a non-frequency-based trip, this field
+       * should either be omitted or be equal to the value in the GTFS feed. When
+       * the trip_id correponds to a frequency-based trip, the start_time must be
+       * specified for trip updates and vehicle positions. If the trip corresponds
+       * to exact_times=1 GTFS record, then start_time must be some multiple
+       * (including zero) of headway_secs later than frequencies.txt start_time for
+       * the corresponding time period. If the trip corresponds to exact_times=0,
+       * then its start_time may be arbitrary, and is initially expected to be the
+       * first departure of the trip. Once established, the start_time of this
+       * frequency-based trip should be considered immutable, even if the first
+       * departure time changes -- that time change may instead be reflected in a
+       * StopTimeUpdate.
+       * Format and semantics of the field is same as that of
+       * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
        * </pre>
        */
       public boolean hasStartTime() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional string start_time = 2;</code>
        *
        * <pre>
-       * The scheduled start time of this trip instance.
-       * This field should be given only if the trip is frequency-expanded in the
-       * GTFS feed. The value must precisely correspond to start_time specified for
-       * the route in the GTFS feed plus some multiple of headway_secs.
-       * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-       * e.g., 11:15:35 or 25:15:35.
+       * The initially scheduled start time of this trip instance.
+       * When the trip_id corresponds to a non-frequency-based trip, this field
+       * should either be omitted or be equal to the value in the GTFS feed. When
+       * the trip_id correponds to a frequency-based trip, the start_time must be
+       * specified for trip updates and vehicle positions. If the trip corresponds
+       * to exact_times=1 GTFS record, then start_time must be some multiple
+       * (including zero) of headway_secs later than frequencies.txt start_time for
+       * the corresponding time period. If the trip corresponds to exact_times=0,
+       * then its start_time may be arbitrary, and is initially expected to be the
+       * first departure of the trip. Once established, the start_time of this
+       * frequency-based trip should be considered immutable, even if the first
+       * departure time changes -- that time change may instead be reflected in a
+       * StopTimeUpdate.
+       * Format and semantics of the field is same as that of
+       * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
        * </pre>
        */
       public java.lang.String getStartTime() {
@@ -15073,12 +15850,21 @@ public final class GtfsRealtime {
        * <code>optional string start_time = 2;</code>
        *
        * <pre>
-       * The scheduled start time of this trip instance.
-       * This field should be given only if the trip is frequency-expanded in the
-       * GTFS feed. The value must precisely correspond to start_time specified for
-       * the route in the GTFS feed plus some multiple of headway_secs.
-       * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-       * e.g., 11:15:35 or 25:15:35.
+       * The initially scheduled start time of this trip instance.
+       * When the trip_id corresponds to a non-frequency-based trip, this field
+       * should either be omitted or be equal to the value in the GTFS feed. When
+       * the trip_id correponds to a frequency-based trip, the start_time must be
+       * specified for trip updates and vehicle positions. If the trip corresponds
+       * to exact_times=1 GTFS record, then start_time must be some multiple
+       * (including zero) of headway_secs later than frequencies.txt start_time for
+       * the corresponding time period. If the trip corresponds to exact_times=0,
+       * then its start_time may be arbitrary, and is initially expected to be the
+       * first departure of the trip. Once established, the start_time of this
+       * frequency-based trip should be considered immutable, even if the first
+       * departure time changes -- that time change may instead be reflected in a
+       * StopTimeUpdate.
+       * Format and semantics of the field is same as that of
+       * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -15098,12 +15884,21 @@ public final class GtfsRealtime {
        * <code>optional string start_time = 2;</code>
        *
        * <pre>
-       * The scheduled start time of this trip instance.
-       * This field should be given only if the trip is frequency-expanded in the
-       * GTFS feed. The value must precisely correspond to start_time specified for
-       * the route in the GTFS feed plus some multiple of headway_secs.
-       * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-       * e.g., 11:15:35 or 25:15:35.
+       * The initially scheduled start time of this trip instance.
+       * When the trip_id corresponds to a non-frequency-based trip, this field
+       * should either be omitted or be equal to the value in the GTFS feed. When
+       * the trip_id correponds to a frequency-based trip, the start_time must be
+       * specified for trip updates and vehicle positions. If the trip corresponds
+       * to exact_times=1 GTFS record, then start_time must be some multiple
+       * (including zero) of headway_secs later than frequencies.txt start_time for
+       * the corresponding time period. If the trip corresponds to exact_times=0,
+       * then its start_time may be arbitrary, and is initially expected to be the
+       * first departure of the trip. Once established, the start_time of this
+       * frequency-based trip should be considered immutable, even if the first
+       * departure time changes -- that time change may instead be reflected in a
+       * StopTimeUpdate.
+       * Format and semantics of the field is same as that of
+       * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
        * </pre>
        */
       public Builder setStartTime(
@@ -15111,7 +15906,7 @@ public final class GtfsRealtime {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
         startTime_ = value;
         onChanged();
         return this;
@@ -15120,16 +15915,25 @@ public final class GtfsRealtime {
        * <code>optional string start_time = 2;</code>
        *
        * <pre>
-       * The scheduled start time of this trip instance.
-       * This field should be given only if the trip is frequency-expanded in the
-       * GTFS feed. The value must precisely correspond to start_time specified for
-       * the route in the GTFS feed plus some multiple of headway_secs.
-       * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-       * e.g., 11:15:35 or 25:15:35.
+       * The initially scheduled start time of this trip instance.
+       * When the trip_id corresponds to a non-frequency-based trip, this field
+       * should either be omitted or be equal to the value in the GTFS feed. When
+       * the trip_id correponds to a frequency-based trip, the start_time must be
+       * specified for trip updates and vehicle positions. If the trip corresponds
+       * to exact_times=1 GTFS record, then start_time must be some multiple
+       * (including zero) of headway_secs later than frequencies.txt start_time for
+       * the corresponding time period. If the trip corresponds to exact_times=0,
+       * then its start_time may be arbitrary, and is initially expected to be the
+       * first departure of the trip. Once established, the start_time of this
+       * frequency-based trip should be considered immutable, even if the first
+       * departure time changes -- that time change may instead be reflected in a
+       * StopTimeUpdate.
+       * Format and semantics of the field is same as that of
+       * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
        * </pre>
        */
       public Builder clearStartTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         startTime_ = getDefaultInstance().getStartTime();
         onChanged();
         return this;
@@ -15138,12 +15942,21 @@ public final class GtfsRealtime {
        * <code>optional string start_time = 2;</code>
        *
        * <pre>
-       * The scheduled start time of this trip instance.
-       * This field should be given only if the trip is frequency-expanded in the
-       * GTFS feed. The value must precisely correspond to start_time specified for
-       * the route in the GTFS feed plus some multiple of headway_secs.
-       * Format of the field is same as that of GTFS/frequencies.txt/start_time,
-       * e.g., 11:15:35 or 25:15:35.
+       * The initially scheduled start time of this trip instance.
+       * When the trip_id corresponds to a non-frequency-based trip, this field
+       * should either be omitted or be equal to the value in the GTFS feed. When
+       * the trip_id correponds to a frequency-based trip, the start_time must be
+       * specified for trip updates and vehicle positions. If the trip corresponds
+       * to exact_times=1 GTFS record, then start_time must be some multiple
+       * (including zero) of headway_secs later than frequencies.txt start_time for
+       * the corresponding time period. If the trip corresponds to exact_times=0,
+       * then its start_time may be arbitrary, and is initially expected to be the
+       * first departure of the trip. Once established, the start_time of this
+       * frequency-based trip should be considered immutable, even if the first
+       * departure time changes -- that time change may instead be reflected in a
+       * StopTimeUpdate.
+       * Format and semantics of the field is same as that of
+       * GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
        * </pre>
        */
       public Builder setStartTimeBytes(
@@ -15151,7 +15964,7 @@ public final class GtfsRealtime {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000004;
+  bitField0_ |= 0x00000008;
         startTime_ = value;
         onChanged();
         return this;
@@ -15175,7 +15988,7 @@ public final class GtfsRealtime {
        * </pre>
        */
       public boolean hasStartDate() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>optional string start_date = 3;</code>
@@ -15257,7 +16070,7 @@ public final class GtfsRealtime {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000010;
         startDate_ = value;
         onChanged();
         return this;
@@ -15279,7 +16092,7 @@ public final class GtfsRealtime {
        * </pre>
        */
       public Builder clearStartDate() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         startDate_ = getDefaultInstance().getStartDate();
         onChanged();
         return this;
@@ -15305,7 +16118,7 @@ public final class GtfsRealtime {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000010;
         startDate_ = value;
         onChanged();
         return this;
@@ -15316,7 +16129,7 @@ public final class GtfsRealtime {
        * <code>optional .transit_realtime.TripDescriptor.ScheduleRelationship schedule_relationship = 4;</code>
        */
       public boolean hasScheduleRelationship() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
        * <code>optional .transit_realtime.TripDescriptor.ScheduleRelationship schedule_relationship = 4;</code>
@@ -15331,7 +16144,7 @@ public final class GtfsRealtime {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         scheduleRelationship_ = value;
         onChanged();
         return this;
@@ -15340,7 +16153,7 @@ public final class GtfsRealtime {
        * <code>optional .transit_realtime.TripDescriptor.ScheduleRelationship schedule_relationship = 4;</code>
        */
       public Builder clearScheduleRelationship() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         scheduleRelationship_ = com.google.transit.realtime.GtfsRealtime.TripDescriptor.ScheduleRelationship.SCHEDULED;
         onChanged();
         return this;
@@ -17564,7 +18377,8 @@ public final class GtfsRealtime {
 
   public interface TranslatedStringOrBuilder extends
       // @@protoc_insertion_point(interface_extends:transit_realtime.TranslatedString)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.GeneratedMessage.
+          ExtendableMessageOrBuilder<TranslatedString> {
 
     /**
      * <code>repeated .transit_realtime.TranslatedString.Translation translation = 1;</code>
@@ -17627,11 +18441,12 @@ public final class GtfsRealtime {
    * </pre>
    */
   public static final class TranslatedString extends
-      com.google.protobuf.GeneratedMessage implements
+      com.google.protobuf.GeneratedMessage.ExtendableMessage<
+        TranslatedString> implements
       // @@protoc_insertion_point(message_implements:transit_realtime.TranslatedString)
       TranslatedStringOrBuilder {
     // Use TranslatedString.newBuilder() to construct.
-    private TranslatedString(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private TranslatedString(com.google.protobuf.GeneratedMessage.ExtendableBuilder<com.google.transit.realtime.GtfsRealtime.TranslatedString, ?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
@@ -17727,7 +18542,8 @@ public final class GtfsRealtime {
 
     public interface TranslationOrBuilder extends
         // @@protoc_insertion_point(interface_extends:transit_realtime.TranslatedString.Translation)
-        com.google.protobuf.MessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.
+            ExtendableMessageOrBuilder<Translation> {
 
       /**
        * <code>required string text = 1;</code>
@@ -17791,11 +18607,12 @@ public final class GtfsRealtime {
      * Protobuf type {@code transit_realtime.TranslatedString.Translation}
      */
     public static final class Translation extends
-        com.google.protobuf.GeneratedMessage implements
+        com.google.protobuf.GeneratedMessage.ExtendableMessage<
+          Translation> implements
         // @@protoc_insertion_point(message_implements:transit_realtime.TranslatedString.Translation)
         TranslationOrBuilder {
       // Use Translation.newBuilder() to construct.
-      private Translation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private Translation(com.google.protobuf.GeneratedMessage.ExtendableBuilder<com.google.transit.realtime.GtfsRealtime.TranslatedString.Translation, ?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
@@ -18019,6 +18836,10 @@ public final class GtfsRealtime {
           memoizedIsInitialized = 0;
           return false;
         }
+        if (!extensionsAreInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -18026,12 +18847,16 @@ public final class GtfsRealtime {
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
+        com.google.protobuf.GeneratedMessage
+          .ExtendableMessage<com.google.transit.realtime.GtfsRealtime.TranslatedString.Translation>.ExtensionWriter extensionWriter =
+            newExtensionWriter();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           output.writeBytes(1, getTextBytes());
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           output.writeBytes(2, getLanguageBytes());
         }
+        extensionWriter.writeUntil(2000, output);
         getUnknownFields().writeTo(output);
       }
 
@@ -18049,6 +18874,7 @@ public final class GtfsRealtime {
           size += com.google.protobuf.CodedOutputStream
             .computeBytesSize(2, getLanguageBytes());
         }
+        size += extensionsSerializedSize();
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
         return size;
@@ -18131,7 +18957,8 @@ public final class GtfsRealtime {
        * Protobuf type {@code transit_realtime.TranslatedString.Translation}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          com.google.protobuf.GeneratedMessage.ExtendableBuilder<
+            com.google.transit.realtime.GtfsRealtime.TranslatedString.Translation, Builder> implements
           // @@protoc_insertion_point(builder_implements:transit_realtime.TranslatedString.Translation)
           com.google.transit.realtime.GtfsRealtime.TranslatedString.TranslationOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
@@ -18232,12 +19059,17 @@ public final class GtfsRealtime {
             language_ = other.language_;
             onChanged();
           }
+          this.mergeExtensionFields(other);
           this.mergeUnknownFields(other.getUnknownFields());
           return this;
         }
 
         public final boolean isInitialized() {
           if (!hasText()) {
+            
+            return false;
+          }
+          if (!extensionsAreInitialized()) {
             
             return false;
           }
@@ -18556,6 +19388,10 @@ public final class GtfsRealtime {
           return false;
         }
       }
+      if (!extensionsAreInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -18563,9 +19399,13 @@ public final class GtfsRealtime {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      com.google.protobuf.GeneratedMessage
+        .ExtendableMessage<com.google.transit.realtime.GtfsRealtime.TranslatedString>.ExtensionWriter extensionWriter =
+          newExtensionWriter();
       for (int i = 0; i < translation_.size(); i++) {
         output.writeMessage(1, translation_.get(i));
       }
+      extensionWriter.writeUntil(2000, output);
       getUnknownFields().writeTo(output);
     }
 
@@ -18579,6 +19419,7 @@ public final class GtfsRealtime {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, translation_.get(i));
       }
+      size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -18674,7 +19515,8 @@ public final class GtfsRealtime {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessage.ExtendableBuilder<
+          com.google.transit.realtime.GtfsRealtime.TranslatedString, Builder> implements
         // @@protoc_insertion_point(builder_implements:transit_realtime.TranslatedString)
         com.google.transit.realtime.GtfsRealtime.TranslatedStringOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
@@ -18793,6 +19635,7 @@ public final class GtfsRealtime {
             }
           }
         }
+        this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -18803,6 +19646,10 @@ public final class GtfsRealtime {
             
             return false;
           }
+        }
+        if (!extensionsAreInitialized()) {
+          
+          return false;
         }
         return true;
       }
@@ -19234,92 +20081,100 @@ public final class GtfsRealtime {
   static {
     java.lang.String[] descriptorData = {
       "\n\023gtfs-realtime.proto\022\020transit_realtime\"" +
-      "i\n\013FeedMessage\022,\n\006header\030\001 \002(\0132\034.transit" +
+      "q\n\013FeedMessage\022,\n\006header\030\001 \002(\0132\034.transit" +
       "_realtime.FeedHeader\022,\n\006entity\030\002 \003(\0132\034.t" +
-      "ransit_realtime.FeedEntity\"\317\001\n\nFeedHeade" +
-      "r\022\035\n\025gtfs_realtime_version\030\001 \002(\t\022Q\n\016incr" +
-      "ementality\030\002 \001(\0162+.transit_realtime.Feed" +
-      "Header.Incrementality:\014FULL_DATASET\022\021\n\tt" +
-      "imestamp\030\003 \001(\004\"4\n\016Incrementality\022\020\n\014FULL" +
-      "_DATASET\020\000\022\020\n\014DIFFERENTIAL\020\001*\006\010\350\007\020\320\017\"\302\001\n" +
-      "\nFeedEntity\022\n\n\002id\030\001 \002(\t\022\031\n\nis_deleted\030\002 ",
-      "\001(\010:\005false\0221\n\013trip_update\030\003 \001(\0132\034.transi" +
-      "t_realtime.TripUpdate\0222\n\007vehicle\030\004 \001(\0132!" +
-      ".transit_realtime.VehiclePosition\022&\n\005ale" +
-      "rt\030\005 \001(\0132\027.transit_realtime.Alert\"\213\005\n\nTr" +
-      "ipUpdate\022.\n\004trip\030\001 \002(\0132 .transit_realtim" +
-      "e.TripDescriptor\0224\n\007vehicle\030\003 \001(\0132#.tran" +
-      "sit_realtime.VehicleDescriptor\022E\n\020stop_t" +
-      "ime_update\030\002 \003(\0132+.transit_realtime.Trip" +
-      "Update.StopTimeUpdate\022\021\n\ttimestamp\030\004 \001(\004" +
-      "\032I\n\rStopTimeEvent\022\r\n\005delay\030\001 \001(\005\022\014\n\004time",
-      "\030\002 \001(\003\022\023\n\013uncertainty\030\003 \001(\005*\006\010\350\007\020\320\017\032\351\002\n\016" +
-      "StopTimeUpdate\022\025\n\rstop_sequence\030\001 \001(\r\022\017\n" +
-      "\007stop_id\030\004 \001(\t\022;\n\007arrival\030\002 \001(\0132*.transi" +
-      "t_realtime.TripUpdate.StopTimeEvent\022=\n\td" +
-      "eparture\030\003 \001(\0132*.transit_realtime.TripUp" +
-      "date.StopTimeEvent\022j\n\025schedule_relations" +
-      "hip\030\005 \001(\0162@.transit_realtime.TripUpdate." +
-      "StopTimeUpdate.ScheduleRelationship:\tSCH" +
-      "EDULED\"?\n\024ScheduleRelationship\022\r\n\tSCHEDU" +
-      "LED\020\000\022\013\n\007SKIPPED\020\001\022\013\n\007NO_DATA\020\002*\006\010\350\007\020\320\017*",
-      "\006\010\350\007\020\320\017\"\341\004\n\017VehiclePosition\022.\n\004trip\030\001 \001(" +
-      "\0132 .transit_realtime.TripDescriptor\0224\n\007v" +
-      "ehicle\030\010 \001(\0132#.transit_realtime.VehicleD" +
-      "escriptor\022,\n\010position\030\002 \001(\0132\032.transit_re" +
-      "altime.Position\022\035\n\025current_stop_sequence" +
-      "\030\003 \001(\r\022\017\n\007stop_id\030\007 \001(\t\022Z\n\016current_statu" +
-      "s\030\004 \001(\01623.transit_realtime.VehiclePositi" +
-      "on.VehicleStopStatus:\rIN_TRANSIT_TO\022\021\n\tt" +
-      "imestamp\030\005 \001(\004\022K\n\020congestion_level\030\006 \001(\016" +
-      "21.transit_realtime.VehiclePosition.Cong",
-      "estionLevel\"G\n\021VehicleStopStatus\022\017\n\013INCO" +
-      "MING_AT\020\000\022\016\n\nSTOPPED_AT\020\001\022\021\n\rIN_TRANSIT_" +
-      "TO\020\002\"}\n\017CongestionLevel\022\034\n\030UNKNOWN_CONGE" +
-      "STION_LEVEL\020\000\022\024\n\020RUNNING_SMOOTHLY\020\001\022\017\n\013S" +
-      "TOP_AND_GO\020\002\022\016\n\nCONGESTION\020\003\022\025\n\021SEVERE_C" +
-      "ONGESTION\020\004*\006\010\350\007\020\320\017\"\266\006\n\005Alert\0222\n\ractive_" +
-      "period\030\001 \003(\0132\033.transit_realtime.TimeRang" +
-      "e\0229\n\017informed_entity\030\005 \003(\0132 .transit_rea" +
-      "ltime.EntitySelector\022;\n\005cause\030\006 \001(\0162\035.tr" +
-      "ansit_realtime.Alert.Cause:\rUNKNOWN_CAUS",
-      "E\022>\n\006effect\030\007 \001(\0162\036.transit_realtime.Ale" +
-      "rt.Effect:\016UNKNOWN_EFFECT\022/\n\003url\030\010 \001(\0132\"" +
-      ".transit_realtime.TranslatedString\0227\n\013he" +
-      "ader_text\030\n \001(\0132\".transit_realtime.Trans" +
-      "latedString\022<\n\020description_text\030\013 \001(\0132\"." +
-      "transit_realtime.TranslatedString\"\330\001\n\005Ca" +
-      "use\022\021\n\rUNKNOWN_CAUSE\020\001\022\017\n\013OTHER_CAUSE\020\002\022" +
-      "\025\n\021TECHNICAL_PROBLEM\020\003\022\n\n\006STRIKE\020\004\022\021\n\rDE" +
-      "MONSTRATION\020\005\022\014\n\010ACCIDENT\020\006\022\013\n\007HOLIDAY\020\007" +
-      "\022\013\n\007WEATHER\020\010\022\017\n\013MAINTENANCE\020\t\022\020\n\014CONSTR",
-      "UCTION\020\n\022\023\n\017POLICE_ACTIVITY\020\013\022\025\n\021MEDICAL" +
-      "_EMERGENCY\020\014\"\265\001\n\006Effect\022\016\n\nNO_SERVICE\020\001\022" +
-      "\023\n\017REDUCED_SERVICE\020\002\022\026\n\022SIGNIFICANT_DELA" +
-      "YS\020\003\022\n\n\006DETOUR\020\004\022\026\n\022ADDITIONAL_SERVICE\020\005" +
-      "\022\024\n\020MODIFIED_SERVICE\020\006\022\020\n\014OTHER_EFFECT\020\007" +
-      "\022\022\n\016UNKNOWN_EFFECT\020\010\022\016\n\nSTOP_MOVED\020\t*\006\010\350" +
-      "\007\020\320\017\"\'\n\tTimeRange\022\r\n\005start\030\001 \001(\004\022\013\n\003end\030" +
-      "\002 \001(\004\"i\n\010Position\022\020\n\010latitude\030\001 \002(\002\022\021\n\tl" +
-      "ongitude\030\002 \002(\002\022\017\n\007bearing\030\003 \001(\002\022\020\n\010odome" +
-      "ter\030\004 \001(\001\022\r\n\005speed\030\005 \001(\002*\006\010\350\007\020\320\017\"\212\002\n\016Tri",
-      "pDescriptor\022\017\n\007trip_id\030\001 \001(\t\022\020\n\010route_id" +
-      "\030\005 \001(\t\022\022\n\nstart_time\030\002 \001(\t\022\022\n\nstart_date" +
-      "\030\003 \001(\t\022T\n\025schedule_relationship\030\004 \001(\01625." +
-      "transit_realtime.TripDescriptor.Schedule" +
-      "Relationship\"O\n\024ScheduleRelationship\022\r\n\t" +
-      "SCHEDULED\020\000\022\t\n\005ADDED\020\001\022\017\n\013UNSCHEDULED\020\002\022" +
-      "\014\n\010CANCELED\020\003*\006\010\350\007\020\320\017\"M\n\021VehicleDescript" +
-      "or\022\n\n\002id\030\001 \001(\t\022\r\n\005label\030\002 \001(\t\022\025\n\rlicense" +
-      "_plate\030\003 \001(\t*\006\010\350\007\020\320\017\"\222\001\n\016EntitySelector\022" +
-      "\021\n\tagency_id\030\001 \001(\t\022\020\n\010route_id\030\002 \001(\t\022\022\n\n",
-      "route_type\030\003 \001(\005\022.\n\004trip\030\004 \001(\0132 .transit" +
-      "_realtime.TripDescriptor\022\017\n\007stop_id\030\005 \001(" +
-      "\t*\006\010\350\007\020\320\017\"\206\001\n\020TranslatedString\022C\n\013transl" +
-      "ation\030\001 \003(\0132..transit_realtime.Translate" +
-      "dString.Translation\032-\n\013Translation\022\014\n\004te" +
-      "xt\030\001 \002(\t\022\020\n\010language\030\002 \001(\tB\035\n\033com.google" +
-      ".transit.realtime"
+      "ransit_realtime.FeedEntity*\006\010\350\007\020\320\017\"\317\001\n\nF" +
+      "eedHeader\022\035\n\025gtfs_realtime_version\030\001 \002(\t" +
+      "\022Q\n\016incrementality\030\002 \001(\0162+.transit_realt" +
+      "ime.FeedHeader.Incrementality:\014FULL_DATA" +
+      "SET\022\021\n\ttimestamp\030\003 \001(\004\"4\n\016Incrementality" +
+      "\022\020\n\014FULL_DATASET\020\000\022\020\n\014DIFFERENTIAL\020\001*\006\010\350" +
+      "\007\020\320\017\"\312\001\n\nFeedEntity\022\n\n\002id\030\001 \002(\t\022\031\n\nis_de",
+      "leted\030\002 \001(\010:\005false\0221\n\013trip_update\030\003 \001(\0132" +
+      "\034.transit_realtime.TripUpdate\0222\n\007vehicle" +
+      "\030\004 \001(\0132!.transit_realtime.VehiclePositio" +
+      "n\022&\n\005alert\030\005 \001(\0132\027.transit_realtime.Aler" +
+      "t*\006\010\350\007\020\320\017\"\232\005\n\nTripUpdate\022.\n\004trip\030\001 \002(\0132 " +
+      ".transit_realtime.TripDescriptor\0224\n\007vehi" +
+      "cle\030\003 \001(\0132#.transit_realtime.VehicleDesc" +
+      "riptor\022E\n\020stop_time_update\030\002 \003(\0132+.trans" +
+      "it_realtime.TripUpdate.StopTimeUpdate\022\021\n" +
+      "\ttimestamp\030\004 \001(\004\022\r\n\005delay\030\005 \001(\005\032I\n\rStopT",
+      "imeEvent\022\r\n\005delay\030\001 \001(\005\022\014\n\004time\030\002 \001(\003\022\023\n" +
+      "\013uncertainty\030\003 \001(\005*\006\010\350\007\020\320\017\032\351\002\n\016StopTimeU" +
+      "pdate\022\025\n\rstop_sequence\030\001 \001(\r\022\017\n\007stop_id\030" +
+      "\004 \001(\t\022;\n\007arrival\030\002 \001(\0132*.transit_realtim" +
+      "e.TripUpdate.StopTimeEvent\022=\n\tdeparture\030" +
+      "\003 \001(\0132*.transit_realtime.TripUpdate.Stop" +
+      "TimeEvent\022j\n\025schedule_relationship\030\005 \001(\016" +
+      "2@.transit_realtime.TripUpdate.StopTimeU" +
+      "pdate.ScheduleRelationship:\tSCHEDULED\"?\n" +
+      "\024ScheduleRelationship\022\r\n\tSCHEDULED\020\000\022\013\n\007",
+      "SKIPPED\020\001\022\013\n\007NO_DATA\020\002*\006\010\350\007\020\320\017*\006\010\350\007\020\320\017\"\340" +
+      "\006\n\017VehiclePosition\022.\n\004trip\030\001 \001(\0132 .trans" +
+      "it_realtime.TripDescriptor\0224\n\007vehicle\030\010 " +
+      "\001(\0132#.transit_realtime.VehicleDescriptor" +
+      "\022,\n\010position\030\002 \001(\0132\032.transit_realtime.Po" +
+      "sition\022\035\n\025current_stop_sequence\030\003 \001(\r\022\017\n" +
+      "\007stop_id\030\007 \001(\t\022Z\n\016current_status\030\004 \001(\01623" +
+      ".transit_realtime.VehiclePosition.Vehicl" +
+      "eStopStatus:\rIN_TRANSIT_TO\022\021\n\ttimestamp\030" +
+      "\005 \001(\004\022K\n\020congestion_level\030\006 \001(\01621.transi",
+      "t_realtime.VehiclePosition.CongestionLev" +
+      "el\022K\n\020occupancy_status\030\t \001(\01621.transit_r" +
+      "ealtime.VehiclePosition.OccupancyStatus\"" +
+      "G\n\021VehicleStopStatus\022\017\n\013INCOMING_AT\020\000\022\016\n" +
+      "\nSTOPPED_AT\020\001\022\021\n\rIN_TRANSIT_TO\020\002\"}\n\017Cong" +
+      "estionLevel\022\034\n\030UNKNOWN_CONGESTION_LEVEL\020" +
+      "\000\022\024\n\020RUNNING_SMOOTHLY\020\001\022\017\n\013STOP_AND_GO\020\002" +
+      "\022\016\n\nCONGESTION\020\003\022\025\n\021SEVERE_CONGESTION\020\004\"" +
+      "\257\001\n\017OccupancyStatus\022\t\n\005EMPTY\020\000\022\030\n\024MANY_S" +
+      "EATS_AVAILABLE\020\001\022\027\n\023FEW_SEATS_AVAILABLE\020",
+      "\002\022\026\n\022STANDING_ROOM_ONLY\020\003\022\036\n\032CRUSHED_STA" +
+      "NDING_ROOM_ONLY\020\004\022\010\n\004FULL\020\005\022\034\n\030NOT_ACCEP" +
+      "TING_PASSENGERS\020\006*\006\010\350\007\020\320\017\"\266\006\n\005Alert\0222\n\ra" +
+      "ctive_period\030\001 \003(\0132\033.transit_realtime.Ti" +
+      "meRange\0229\n\017informed_entity\030\005 \003(\0132 .trans" +
+      "it_realtime.EntitySelector\022;\n\005cause\030\006 \001(" +
+      "\0162\035.transit_realtime.Alert.Cause:\rUNKNOW" +
+      "N_CAUSE\022>\n\006effect\030\007 \001(\0162\036.transit_realti" +
+      "me.Alert.Effect:\016UNKNOWN_EFFECT\022/\n\003url\030\010" +
+      " \001(\0132\".transit_realtime.TranslatedString",
+      "\0227\n\013header_text\030\n \001(\0132\".transit_realtime" +
+      ".TranslatedString\022<\n\020description_text\030\013 " +
+      "\001(\0132\".transit_realtime.TranslatedString\"" +
+      "\330\001\n\005Cause\022\021\n\rUNKNOWN_CAUSE\020\001\022\017\n\013OTHER_CA" +
+      "USE\020\002\022\025\n\021TECHNICAL_PROBLEM\020\003\022\n\n\006STRIKE\020\004" +
+      "\022\021\n\rDEMONSTRATION\020\005\022\014\n\010ACCIDENT\020\006\022\013\n\007HOL" +
+      "IDAY\020\007\022\013\n\007WEATHER\020\010\022\017\n\013MAINTENANCE\020\t\022\020\n\014" +
+      "CONSTRUCTION\020\n\022\023\n\017POLICE_ACTIVITY\020\013\022\025\n\021M" +
+      "EDICAL_EMERGENCY\020\014\"\265\001\n\006Effect\022\016\n\nNO_SERV" +
+      "ICE\020\001\022\023\n\017REDUCED_SERVICE\020\002\022\026\n\022SIGNIFICAN",
+      "T_DELAYS\020\003\022\n\n\006DETOUR\020\004\022\026\n\022ADDITIONAL_SER" +
+      "VICE\020\005\022\024\n\020MODIFIED_SERVICE\020\006\022\020\n\014OTHER_EF" +
+      "FECT\020\007\022\022\n\016UNKNOWN_EFFECT\020\010\022\016\n\nSTOP_MOVED" +
+      "\020\t*\006\010\350\007\020\320\017\"/\n\tTimeRange\022\r\n\005start\030\001 \001(\004\022\013" +
+      "\n\003end\030\002 \001(\004*\006\010\350\007\020\320\017\"i\n\010Position\022\020\n\010latit" +
+      "ude\030\001 \002(\002\022\021\n\tlongitude\030\002 \002(\002\022\017\n\007bearing\030" +
+      "\003 \001(\002\022\020\n\010odometer\030\004 \001(\001\022\r\n\005speed\030\005 \001(\002*\006" +
+      "\010\350\007\020\320\017\"\240\002\n\016TripDescriptor\022\017\n\007trip_id\030\001 \001" +
+      "(\t\022\020\n\010route_id\030\005 \001(\t\022\024\n\014direction_id\030\006 \001" +
+      "(\r\022\022\n\nstart_time\030\002 \001(\t\022\022\n\nstart_date\030\003 \001",
+      "(\t\022T\n\025schedule_relationship\030\004 \001(\01625.tran" +
+      "sit_realtime.TripDescriptor.ScheduleRela" +
+      "tionship\"O\n\024ScheduleRelationship\022\r\n\tSCHE" +
+      "DULED\020\000\022\t\n\005ADDED\020\001\022\017\n\013UNSCHEDULED\020\002\022\014\n\010C" +
+      "ANCELED\020\003*\006\010\350\007\020\320\017\"M\n\021VehicleDescriptor\022\n" +
+      "\n\002id\030\001 \001(\t\022\r\n\005label\030\002 \001(\t\022\025\n\rlicense_pla" +
+      "te\030\003 \001(\t*\006\010\350\007\020\320\017\"\222\001\n\016EntitySelector\022\021\n\ta" +
+      "gency_id\030\001 \001(\t\022\020\n\010route_id\030\002 \001(\t\022\022\n\nrout" +
+      "e_type\030\003 \001(\005\022.\n\004trip\030\004 \001(\0132 .transit_rea" +
+      "ltime.TripDescriptor\022\017\n\007stop_id\030\005 \001(\t*\006\010",
+      "\350\007\020\320\017\"\226\001\n\020TranslatedString\022C\n\013translatio" +
+      "n\030\001 \003(\0132..transit_realtime.TranslatedStr" +
+      "ing.Translation\0325\n\013Translation\022\014\n\004text\030\001" +
+      " \002(\t\022\020\n\010language\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\350\007\020\320\017B\035" +
+      "\n\033com.google.transit.realtime"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19356,7 +20211,7 @@ public final class GtfsRealtime {
     internal_static_transit_realtime_TripUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_transit_realtime_TripUpdate_descriptor,
-        new java.lang.String[] { "Trip", "Vehicle", "StopTimeUpdate", "Timestamp", });
+        new java.lang.String[] { "Trip", "Vehicle", "StopTimeUpdate", "Timestamp", "Delay", });
     internal_static_transit_realtime_TripUpdate_StopTimeEvent_descriptor =
       internal_static_transit_realtime_TripUpdate_descriptor.getNestedTypes().get(0);
     internal_static_transit_realtime_TripUpdate_StopTimeEvent_fieldAccessorTable = new
@@ -19374,7 +20229,7 @@ public final class GtfsRealtime {
     internal_static_transit_realtime_VehiclePosition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_transit_realtime_VehiclePosition_descriptor,
-        new java.lang.String[] { "Trip", "Vehicle", "Position", "CurrentStopSequence", "StopId", "CurrentStatus", "Timestamp", "CongestionLevel", });
+        new java.lang.String[] { "Trip", "Vehicle", "Position", "CurrentStopSequence", "StopId", "CurrentStatus", "Timestamp", "CongestionLevel", "OccupancyStatus", });
     internal_static_transit_realtime_Alert_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_transit_realtime_Alert_fieldAccessorTable = new
@@ -19398,7 +20253,7 @@ public final class GtfsRealtime {
     internal_static_transit_realtime_TripDescriptor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_transit_realtime_TripDescriptor_descriptor,
-        new java.lang.String[] { "TripId", "RouteId", "StartTime", "StartDate", "ScheduleRelationship", });
+        new java.lang.String[] { "TripId", "RouteId", "DirectionId", "StartTime", "StartDate", "ScheduleRelationship", });
     internal_static_transit_realtime_VehicleDescriptor_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_transit_realtime_VehicleDescriptor_fieldAccessorTable = new

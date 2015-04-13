@@ -13,6 +13,10 @@
 # data
 **.pb
 **.properties
+F_ALERT
+F_TRIP
+F_VEHICLE
+**log
 
 # mvn
 target
