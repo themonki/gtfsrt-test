@@ -91,11 +91,6 @@ public final class GtfsRealtime {
    * obtained as a response to an appropriate HTTP GET request.
    * A realtime feed is always defined with relation to an existing GTFS feed.
    * All the entity ids are resolved with respect to the GTFS feed.
-   * A feed depends on some external configuration:
-   * - The corresponding GTFS feed.
-   * - Feed application (updates, positions or alerts). A feed should contain only
-   *   items of one specified application; all the other entities will be ignored.
-   * - Polling frequency
    * </pre>
    */
   public static final class FeedMessage extends
@@ -450,11 +445,6 @@ public final class GtfsRealtime {
      * obtained as a response to an appropriate HTTP GET request.
      * A realtime feed is always defined with relation to an existing GTFS feed.
      * All the entity ids are resolved with respect to the GTFS feed.
-     * A feed depends on some external configuration:
-     * - The corresponding GTFS feed.
-     * - Feed application (updates, positions or alerts). A feed should contain only
-     *   items of one specified application; all the other entities will be ignored.
-     * - Polling frequency
      * </pre>
      */
     public static final class Builder extends
@@ -1307,7 +1297,7 @@ public final class GtfsRealtime {
      * <pre>
      * Determines whether the current fetch is incremental.  Currently,
      * DIFFERENTIAL mode is unsupported and behavior is unspecified for feeds
-     * that use this mode.  There are discussions on the GTFS-realtime mailing
+     * that use this mode.  There are discussions on the GTFS Realtime mailing
      * list around fully specifying the behavior of DIFFERENTIAL mode and the
      * documentation will be updated when those discussions are finalized.
      * </pre>
